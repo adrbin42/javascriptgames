@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<body>
+<p>&nbsp;&nbsp;<img id="myImage" onclick="changeImage()" src="http://www.noonco.com/rc/java_art/picture_doorway.jpg" width="200" height="150">
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Javascript Text Adventure</p>
+<ul>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="myFunction01()">North</button>
+</p>
+<p>&nbsp;&nbsp;
+<button onclick="myFunction02()">West</button>
+<button onclick="myFunction03()">East</button>
+</p>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button onclick="myFunction04()">South</button>
+</p>
+</ul>
+<p id="demo"></p>
+
+<script>
+
+var north=0;
+var south=0;
+var west=0;
+var east=0;
+var position = "Central Room";
+var worldsize=3;
+
+ 
+
+function myFunction01() {
+if (north > worldsize){
+return;
+}
+if (south < 1) {
+        north = north + 1;
+}else {
+        south = south - 1;
+}
+myposition();
+        document.getElementById("demo").innerHTML =
+        "North: " + north +"   South: " + south+"   East: " + east + "   West: " + west + "<br>" + "Location: " + position;
+}
+
+ 
+
+function myFunction02() {
+if (west > worldsize){
+return;
+}
+if (east < 1) {
+        west = west + 1;
+}else{
+        east = east - 1;
+}
+myposition();
+        document.getElementById("demo").innerHTML =
+        "North: " + north +"   South: " + south+"   East: " + east + "   West: " + west + "<br>" + "Location: " + position;
+}
+
+function myFunction03() {
+
+if (east > worldsize){
+return;
+}
+if (west < 1) {
+        east = east + 1;
+}else{
+        west = west - 1;
+}
+myposition();
+        document.getElementById("demo").innerHTML =
+        "North: " + north +"   South: " + south+"   East: " + east + "   West: " + west + "<br>" + "Location: " + position;
+}
+
+ 
+
+function myFunction04() {
+if (south > worldsize){
+return;
+}
+if (north > 0) {
+        north = north - 1;
+}else{
+south = south + 1;
+}
+myposition();
+        document.getElementById("demo").innerHTML =
+        "North: " + north +"   South: " + south+"   East: " + east + "   West: " + west + "<br>" + "Location: " + position;
+}
+
+
+function myposition() {
+var image = document.getElementById('myImage');
+if (north == 3 && west == 3){
+position = "Cat Freak Out!";
+image.src = "http://www.noonco.com/rc/java_art/cat_01.jpg";
+}
+
+else{
+position = "lost";
+image.src = "http://www.noonco.com/rc/java_art/picture_field.jpg";
+}
+}
+</script>
+</body>
+</html>

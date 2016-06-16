@@ -1,0 +1,39 @@
+body {
+    margin: 0 auto;
+    background: #999;
+}
+
+#gameTitle {
+    margin: 0 auto;
+    width: 854px;
+    height: 50px;
+    font-size: 35px;
+    font-family: "Verdana";
+    text-align: center;
+}
+
+#gameWindow {
+    margin: 0 auto;
+    width: 854px;
+    height: 480px;
+    background: #fff;
+}
+
+#gameCanvas {
+    width: 854px;
+    height: 480px;
+    background: #000;
+}
+
+#gameSubWindow {
+    margin: 0 auto;
+    width: 854px;
+    height: 480px;
+    background: #fff;
+}
+
+#gameSubCanvas {
+    width: 854px;
+    height: 480px;
+    background: #000;
+}
