@@ -1,3 +1,11 @@
 //Game States
 
-If gameState === 1 that is the exit screen.
+If gameState === 2 that is the exit screen.
+
+If gameState === 1 that goes to the screen where you select the game of your choice.
+
+If gameState === 0 then the game resets itself back to the beginning.
+
+If gameChoice === G then go to the guessing game.
+
+If gameChoice === S then go to the snake game.
